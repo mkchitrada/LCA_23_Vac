@@ -8,26 +8,28 @@
 </head>
 <body>
     <h1>Dec 2023 Vacation</h1>
+    
     <div id="form">
-        <input type="text" id="studentName" placeholder="Student Name" required>
-        <input type="date" id="startDate" placeholder="Start Date" required>
-        <input type="date" id="endDate" placeholder="End Date" required>
-        <button onclick="addEntry()">Add</button>
+        <input type="text" id="studentName" placeholder="Student Name">
+        <input type="date" id="startDate">
+        <input type="date" id="endDate">
+        <button id="submitBtn" onclick="addOrUpdateEntry()">Add</button>
     </div>
+    
     <table id="vacationTable">
         <thead>
             <tr>
-                <th onclick="sortTable(0)">Student Name</th>
-                <th onclick="sortTable(1)">Start Date</th>
-                <th onclick="sortTable(2)">End Date</th>
-                <th>Duration</th>
+                <th onclick="sortTable(0)">Student Name &#x2195;</th>
+                <th onclick="sortTable(1)">Start Date &#x2195;</th>
+                <th onclick="sortTable(2)">End Date &#x2195;</th>
                 <th>Actions</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody id="tableBody">
             <!-- Entries will go here -->
         </tbody>
     </table>
+
     <script src="script.js"></script>
 </body>
 </html>
