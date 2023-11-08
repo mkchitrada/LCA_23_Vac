@@ -3,30 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dec 2023 Vacation Tracker</title>
+<title>Dec 2023 Vacation Tracking</title>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <h1>Dec 2023 Vacation</h1>
 
-<div id="form-container">
-  <input type="text" id="studentName" placeholder="Student Name" required>
-  <input type="date" id="startDate" required>
-  <input type="date" id="endDate" required>
-  <button onclick="addEntry()">Add</button>
-</div>
+<!-- Form to add new vacation entry -->
+<label for="studentName">Student Name:</label>
+<input type="text" id="studentName" name="studentName">
+<label for="startDate">Start Date:</label>
+<input type="date" id="startDate" name="startDate">
+<label for="endDate">End Date:</label>
+<input type="date" id="endDate" name="endDate">
+<button onclick="addEntry()">Add Entry</button>
 
-<table id="vacationTable">
+<!-- Table for vacation entries -->
+<table>
   <thead>
     <tr>
-      <th onclick="sortTable(0)">Student Name</th>
-      <th onclick="sortTable(1)">Start Date</th>
-      <th onclick="sortTable(2)">End Date</th>
+      <th data-column="name">Student Name</th>
+      <th data-column="start">Start Date</th>
+      <th data-column="end">End Date</th>
       <th>Actions</th>
     </tr>
   </thead>
   <tbody id="tableBody">
-    <!-- Table rows will be added here by JavaScript -->
+    <!-- Table rows will be inserted here -->
   </tbody>
 </table>
 

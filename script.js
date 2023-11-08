@@ -17,10 +17,16 @@ let entries = [
     {name: 'Prisha', start: '2023-12-23', end: '2024-01-09'}
   ];
   
+ 
+  const sortDirections = {
+    name: true,
+    start: true,
+    end: true
+  };
   
   function formatDate(dateStr) {
     const date = new Date(dateStr);
-    return `${date.getDate()}-${date.toLocaleString('default', { month: 'short' })}`;
+    return `${date.getDate().toString().padStart(2, '0')}-${date.toLocaleString('default', { month: 'short' })}`;
   }
   
   function addEntry() {
@@ -31,10 +37,9 @@ let entries = [
     renderTable();
   }
   
-  // Render table
   function renderTable() {
     const tableBody = document.getElementById('tableBody');
-    tableBody.innerHTML = ''; // Clear the table
+    tableBody.innerHTML = '';
     entries.forEach((entry, index) => {
       const row = `<tr>
                      <td>${entry.name}</td>
@@ -49,28 +54,47 @@ let entries = [
     });
   }
   
-  function editEntry(index) {
-    // Implement the logic to edit an entry
-  }
-  
   function deleteEntry(index) {
     entries.splice(index, 1);
     renderTable();
   }
   
   function sortTable(column) {
-    const sortAsc = !this.sortAsc;
-    this.sortAsc = sortAsc; // Toggle the sort order
+    sortDirections[column] = !sortDirections[column];
   
     entries.sort((a, b) => {
-      if (a[column] < b[column]) return sortAsc ? -1 : 1;
-      if (a[column] > b[column]) return sortAsc ? 1 : -1;
-      return 0;
+      let compA, compB;
+  
+      if (column === 'start' || column === 'end') {
+        compA = new Date(a[column]);
+        compB = new Date(b[column]);
+      } else {
+        compA = a[column].toLowerCase();
+        compB = b[column].toLowerCase();
+      }
+  
+      if (compA < compB) {
+        return sortDirections[column] ? -1 : 1;
+      } else if (compA > compB) {
+        return sortDirections[column] ? 1 : -1;
+      } else {
+        return 0;
+      }
     });
   
     renderTable();
   }
   
-  // Call the renderTable function on script load to display initial data
-  renderTable();
+  document.addEventListener('DOMContentLoaded', () => {
+    const headers = document.querySelectorAll('th');
+    headers.forEach(header => {
+      const column = header.getAttribute('data-column');
+      if (column) {
+        header.addEventListener('click', () => sortTable(column));
+      }
+    });
+  
+    // Render initial table
+    renderTable();
+  });
   
