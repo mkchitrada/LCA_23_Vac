@@ -19,11 +19,6 @@ function addEntry() {
     loadEntries();
 }
 
-function formatDate(dateString) {
-    const options = { day: '2-digit', month: 'short' };
-    return new Date(dateString).toLocaleDateString('en-US', options);
-}
-
 function loadEntries() {
     let entries = JSON.parse(localStorage.getItem('vacationEntries') || '[]');
     let tableBody = document.getElementById('vacationTable').getElementsByTagName('tbody')[0];
@@ -42,52 +37,16 @@ function loadEntries() {
         let duration = (endDate - startDate) / (1000 * 60 * 60 * 24);
 
         nameCell.innerHTML = entry.name;
-        startCell.innerHTML = formatDate(entry.start);
-        endCell.innerHTML = formatDate(entry.end);
+        startCell.innerHTML = entry.start;
+        endCell.innerHTML = entry.end;
         durationCell.innerHTML = duration + ' days';
-        actionsCell.innerHTML = `<button onclick="editEntry(${index})">Edit</button> <button onclick="deleteEntry(${index})">Delete</button>`;
+        actionsCell.innerHTML = `<button onclick="deleteEntry(${index})">Delete</button>`;
 
         document.getElementById('studentName').value = '';
         document.getElementById('startDate').value = '';
         document.getElementById('endDate').value = '';
     });
 }
-
-function editEntry(index) {
-    let entries = JSON.parse(localStorage.getItem('vacationEntries') || '[]');
-    // Populate the form fields with the data from the entry to be edited
-    document.getElementById('studentName').value = entries[index].name;
-    document.getElementById('startDate').value = entries[index].start;
-    document.getElementById('endDate').value = entries[index].end;
-
-    // Update the Add button to Save
-    let addButton = document.querySelector('#form button');
-    addButton.textContent = 'Save';
-    addButton.onclick = function() {
-        saveEntry(index);
-    };
-}
-
-function saveEntry(index) {
-    let entries = JSON.parse(localStorage.getItem('vacationEntries') || '[]');
-    entries[index].name = document.getElementById('studentName').value;
-    entries[index].start = document.getElementById('startDate').value;
-    entries[index].end = document.getElementById('endDate').value;
-
-    localStorage.setItem('vacationEntries', JSON.stringify(entries));
-    loadEntries();
-
-    // Reset the button back to Add after saving
-    let addButton = document.querySelector('#form button');
-    addButton.textContent = 'Add';
-    addButton.onclick = addEntry;
-
-    document.getElementById('studentName').value = '';
-    document.getElementById('startDate').value = '';
-    document.getElementById('endDate').value = '';
-
-}
-
 
 function deleteEntry(index) {
     let entries = JSON.parse(localStorage.getItem('vacationEntries') || '[]');
