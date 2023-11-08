@@ -34,17 +34,17 @@ function loadEntries() {
         let nameCell = row.insertCell(0);
         let startCell = row.insertCell(1);
         let endCell = row.insertCell(2);
-        // let durationCell = row.insertCell(3);
+        let durationCell = row.insertCell(3);
         let actionsCell = row.insertCell(4);
 
         let startDate = new Date(entry.start);
         let endDate = new Date(entry.end);
-        // let duration = (endDate - startDate) / (1000 * 60 * 60 * 24);
+        let duration = (endDate - startDate) / (1000 * 60 * 60 * 24);
 
         nameCell.innerHTML = entry.name;
         startCell.innerHTML = formatDate(entry.start);
         endCell.innerHTML = formatDate(entry.end);
-        // durationCell.innerHTML = duration + ' days';
+        durationCell.innerHTML = duration + ' days';
         actionsCell.innerHTML = `<button onclick="editEntry(${index})">Edit</button> <button onclick="deleteEntry(${index})">Delete</button>`;
 
         document.getElementById('studentName').value = '';
