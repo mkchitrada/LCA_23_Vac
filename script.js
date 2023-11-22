@@ -1,10 +1,6 @@
 // Initial data
 let entries = [
-    {name: 'Sayesha', start: '2023-11-11', end: '2023-11-19'},
-    {name: 'Tanmai', start: '2023-11-10', end: '2024-01-01'},
-    {name: 'Ruhan', start: '2023-11-15', end: '2023-11-26'},
-    {name: 'Rishta', start: '2023-11-15', end: '2023-11-30'},
-    {name: 'Darsh', start: '2023-11-14', end: '2023-11-26'},
+    {name: 'Rishta', start: '2023-11-15', end: '2023-12-31'},
     {name: 'Shaktivel', start: '2023-11-27', end: '2023-12-03'},
     {name: 'Dharamveer', start: '2023-11-27', end: '2023-12-21'},
     {name: 'Ashwath', start: '2023-12-02', end: '2024-12-19'},
@@ -16,6 +12,7 @@ let entries = [
     {name: 'Anisha', start: '2023-12-18', end: '2024-01-08'},
     {name: 'Ria', start: '2023-12-22', end: '2024-01-15'},
     {name: 'Aagam', start: '2023-12-22', end: '2024-01-02'},
+    {name: 'Tanmai', start: '2023-11-10', end: '2024-01-01'},
     {name: 'Prisha', start: '2023-12-23', end: '2024-01-09'}
   ];
   
