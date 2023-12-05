@@ -6,13 +6,17 @@ let entries = [
     {name: 'Dharamveer', start: '2023-11-27', end: '2023-12-21'},
     {name: 'Ashwath', start: '2023-12-02', end: '2024-12-19'},
     {name: 'Monisha', start: '2023-12-05', end: '2024-01-03'},
+    {name: 'Nakul', start: '2023-12-6', end: '2024-01-03'},
+    {name: 'Aparna', start: '2023-12-10', end: '2024-01-06'},
     {name: 'Anika', start: '2023-12-14', end: '2024-01-03'},
+    {name: 'Sarea', start: '2023-12-14', end: '2024-01-06'},
+    {name: 'Kimaayra', start: '2023-12-15', end: '2024-01-06'},
     {name: 'Sophia', start: '2023-12-15', end: '2024-01-05'},
     {name: 'Jiya', start: '2023-12-15', end: '2024-01-08'},
+    {name: 'Payal', start: '2023-12-16', end: '2024-01-07'},
     {name: 'Anisha', start: '2023-12-18', end: '2024-01-08'},
     {name: 'Ria', start: '2023-12-22', end: '2024-01-15'},
     {name: 'Aagam', start: '2023-12-22', end: '2024-01-02'},
-    {name: 'Tanmai', start: '2023-11-10', end: '2024-01-01'},
     {name: 'Prisha', start: '2023-12-23', end: '2024-01-09'}
   ];
   
