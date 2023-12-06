@@ -16,7 +16,7 @@ let entries = [
     {name: 'Arav', start: '2023-12-18', end: '2024-01-08'},
     {name: 'Ria', start: '2023-12-22', end: '2024-01-15'},
     {name: 'Aagam', start: '2023-12-22', end: '2024-01-02'},
-    {name: 'Prisha', start: '2023-12-23', end: '2024-01-09'}
+    {name: 'Prisha', start: '2023-12-23', end: '2024-01-09'},
     {name: 'Pratham', start: '2024-01-02', end: '2024-01-10'}
   ];
   
