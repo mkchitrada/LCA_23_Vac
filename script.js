@@ -5,7 +5,7 @@ let entries = [
     {name: 'Dharamveer', start: '2023-11-27', end: '2023-12-21'},
     {name: 'Ashwath', start: '2023-12-02', end: '2023-12-19'},
     {name: 'Monisha', start: '2023-12-05', end: '2024-01-03'},
-    {name: 'Nakul', start: '2023-12-6', end: '2024-01-03'},
+    {name: 'Nakul', start: '2023-12-06', end: '2024-01-03'},
     {name: 'Aparna', start: '2023-12-10', end: '2024-01-06'},
     {name: 'Anika(Shilpi)', start: '2023-12-14', end: '2024-01-03'},
     {name: 'Sarea', start: '2023-12-14', end: '2024-01-06'},
