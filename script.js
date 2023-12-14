@@ -1,23 +1,23 @@
 // Initial data
 let entries = [
-    {name: 'Rishta', start: '2023-11-15', end: '2023-12-31'},
-    {name: 'Maesha', start: '2023-11-23', end: '2024-01-15'},
-    {name: 'Dharamveer', start: '2023-11-27', end: '2023-12-21'},
-    {name: 'Ashwath', start: '2023-12-02', end: '2023-12-19'},
-    {name: 'Monisha', start: '2023-12-05', end: '2024-01-03'},
+    {name: '⛔️ Rishta', start: '2023-11-15', end: '2023-12-31'},
+    {name: '⛔️ Maesha', start: '2023-11-23', end: '2024-01-15'},
+    {name: '✅ Dharamveer', start: '2023-11-27', end: '2023-12-21'},
+    {name: '⛔️ Monisha', start: '2023-12-05', end: '2024-01-03'},
     {name: 'Nakul', start: '2023-12-06', end: '2024-01-03'},
-    {name: 'Aparna', start: '2023-12-10', end: '2024-01-06'},
-    {name: 'Anika(Shilpi)', start: '2023-12-14', end: '2024-01-03'},
-    {name: 'Sarea', start: '2023-12-14', end: '2024-01-06'},
-    {name: 'Kimaayra', start: '2023-12-15', end: '2024-01-06'},
-    {name: 'Sophia', start: '2023-12-15', end: '2024-01-05'},
-    {name: 'Jiya', start: '2023-12-15', end: '2024-01-08'},
-    {name: 'Payal', start: '2023-12-16', end: '2024-01-07'},
-    {name: 'Arav', start: '2023-12-18', end: '2024-01-08'},
-    {name: 'Ria', start: '2023-12-22', end: '2024-01-15'},
-    {name: 'Aagam', start: '2023-12-22', end: '2024-01-02'},
-    {name: 'Prisha', start: '2023-12-23', end: '2024-01-09'},
-    {name: 'Pratham', start: '2024-01-02', end: '2024-01-10'}
+    {name: '✅ Aparna', start: '2023-12-10', end: '2024-01-06'},
+    {name: '⛔️ Anika(Shilpi)', start: '2023-12-14', end: '2024-01-03'},
+    {name: '⛔️ Sarea', start: '2023-12-14', end: '2024-01-06'},
+    {name: '✅ Kimaayra', start: '2023-12-15', end: '2024-01-06'},
+    {name: '✅ Sophia', start: '2023-12-15', end: '2024-01-05'},
+    {name: '⛔️ Jiya', start: '2023-12-15', end: '2024-01-08'},
+    {name: '⛔️ Arav', start: '2023-12-18', end: '2024-01-08'},
+    {name: '⛔️ Ira', start: '2023-12-18', end: '2023-12-30'},
+    {name: '⛔️ Ria', start: '2023-12-22', end: '2024-01-15'},
+    {name: '❓ Aagam', start: '2023-12-22', end: '2024-01-02'},
+    {name: '❓ Prisha', start: '2023-12-23', end: '2024-01-09'},
+    {name: '⛔️ Pratham', start: '2024-01-02', end: '2024-01-10'},
+    {name: '❓ Varun', start: '2023-12-16', end: '2023-12-26'}
   ];
   
  
